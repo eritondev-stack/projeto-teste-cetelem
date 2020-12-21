@@ -164,9 +164,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>\
 
-    <modal name="my-first-modal">
+    <modal name="my-first-modal" transition="scale">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -436,12 +436,35 @@ export default {
 </script>
 
 <style>
-.back {
+
+.vm--overlay{
+
+    background: rgba(238, 236, 236, 0.5) !important;
+}
+
+.vm--modal{
+  z-index: 1000 !important;
+  background: white !important;
+}
+
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s;
+}
+.scale-enter,
+.scale-leave-active {
+  opacity: 0;
+  transform: scale(0.3) translateY(24px); 
+}                                                                                                   
+
+
+
+ .back {
   background: cover;
   background: #d9e3e7;
   padding: 30px;
 }
-
+ 
 .box-dash {
   width: 100%;
   background-color: white;
